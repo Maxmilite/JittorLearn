@@ -25,7 +25,7 @@ def main(config, ck_file):
     runner.test(True)
     
 if __name__ == "__main__":
-    objects = ['hotdog', 'lego', 'mic']
+    objects = ['chair', 'drums']
     base_dir = 'logs/test/'
     for obj in objects:
         config = base_dir + f'{obj}/' + f'ngp_{obj.lower()}.py'
