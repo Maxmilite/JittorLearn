@@ -14,6 +14,7 @@ from jnerf.utils.config import init_cfg
 # jt.flags.gopt_disable=1
 jt.flags.use_cuda = 1
 
+# set default dtype to float16
 
 def main():
     assert jt.flags.cuda_archs[0] >= 61, "Failed: Sm arch version is too low! Sm arch version must not be lower than sm_61!"
