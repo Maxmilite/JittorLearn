@@ -12,10 +12,12 @@ assert () {
 
 assert $term
 
-if ($term == "0"); then
+echo "Training term $term"
+
+if [ $term -eq 0 ]; then
     python tools/run_net.py --config-file ./projects/ngp/configs/ngp_chair.py > logs/term0.log
     python tools/run_net.py --config-file ./projects/ngp/configs/ngp_drums.py > logs/term0.log
-    
+
     python test0.py > logs/term0.log
 else
     python tools/run_net.py --config-file ./projects/ngp/configs/ngp_ficus.py > logs/term1.log
